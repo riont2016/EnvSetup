@@ -31,6 +31,8 @@ php-fpm -c /usr/local/etc/php/php.ini-production -y /usr/local/etc/php-fpm.conf
 echo "start nginx"
 nginx -c /etc/nginx/nginx.conf
 
+chmod -R 777 /code/thinkphp-demo
+
 # 查看日志
 tail -f /tmp/var/nginx/access.log /tmp/var/nginx/error.log
 EOF
